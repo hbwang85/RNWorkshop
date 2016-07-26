@@ -10,6 +10,8 @@ import {
   ActivityIndicatorIOS,
 } from 'react-native'
 
+var DetailPage = require('./DetailPage').default;
+
 class SearchResults extends Component {
 
   static propTypes = {}
@@ -18,21 +20,42 @@ class SearchResults extends Component {
 
   constructor(props) {
     super(props)
-    var dataSource = new ListView.DataSource(
+    var ds = new ListView.DataSource(
       {rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
       isLoading: true,
-      dataSource: dataSource.cloneWithRows(['row 1', 'row 2']),
+      dataSource: ds.cloneWithRows([]),
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
+    fetch('https://api.github.com/search/users?q=h&order=asc')
+      .then((response) => response.json())
+      .then((responseData) => {
+        console.log(responseData);
+        this.setState({
+          dataSource: this.state.dataSource.cloneWithRows(responseData.items)
+        })
+      })
+      .catch((error) => {
+        console.error(error);    //catch must be the last one
+      })
+    .done();
+      
+  }
+  
+  _selectCell(user: Object) {
+    this.props.navigator.push({
+      title: 'Detail',
+      component: DetailPage,
+      passProps: {user:user},
+    });
   }
 
   renderRow(rowData, sectionID, rowID) {
     return (
       <TouchableHighlight
-        onPress={() => {}}
+        onPress={() => this._selectCell(rowData)}
         activeOpacity={75 / 100}
         underlayColor={"rgb(210,210,210)"}>
           <View
@@ -48,11 +71,11 @@ class SearchResults extends Component {
            <Image
              style={{
                width: 80,  
-               height:  80,
+               height: 80,
                margin: 10,
              }}
              resizeMode={"contain"}
-             source={{uri:'https://unsplash.it/600/400/?random'}}
+             source={{uri:rowData.avatar_url}}
              />
            <View
              style={{
@@ -68,7 +91,7 @@ class SearchResults extends Component {
                  fontFamily: 'Helvetica Neue', 
                  marginTop: 40,
                }}>
-               My Text
+               {rowData.login}
              </Text>
            </View>
         </View>
@@ -92,6 +115,7 @@ class SearchResults extends Component {
     return (
      <View style={{flex: 1}}>
        <ListView
+        enableEmptySections={true} //MUST
         dataSource={this.state.dataSource}
         renderRow={this.renderRow.bind(this)}/>
      </View>
