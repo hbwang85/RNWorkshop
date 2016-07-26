@@ -1,0 +1,134 @@
+{
+	"liveValues": [
+		{
+			"range": {
+				"from": {
+					"line": 58,
+					"ch": 23
+				},
+				"to": {
+					"line": 58,
+					"ch": 25
+				}
+			},
+			"type": "number",
+			"name": "ActiveOpacity",
+			"min": 0,
+			"max": 100,
+			"group": "TOUCHABLE HIGHLIGHT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 59,
+					"ch": 23
+				},
+				"to": {
+					"line": 59,
+					"ch": 41
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "UnderlayColor",
+			"group": "TOUCHABLE HIGHLIGHT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 68,
+					"ch": 33
+				},
+				"to": {
+					"line": 68,
+					"ch": 40
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "BackgroundColor",
+			"group": "VIEW"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 72,
+					"ch": 27
+				},
+				"to": {
+					"line": 72,
+					"ch": 25
+				}
+			},
+			"type": "number",
+			"name": "Width",
+			"max": 600,
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 76,
+					"ch": 34
+				},
+				"to": {
+					"line": 76,
+					"ch": 35
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 87,
+					"ch": 34
+				},
+				"to": {
+					"line": 87,
+					"ch": 32
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "Color",
+			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 88,
+					"ch": 32
+				},
+				"to": {
+					"line": 88,
+					"ch": 30
+				}
+			},
+			"type": "number",
+			"name": "FontSize",
+			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 89,
+					"ch": 40
+				},
+				"to": {
+					"line": 89,
+					"ch": 38
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "FontWeight",
+			"type": "string",
+			"name": "FontWeight",
+			"group": "TEXT"
+		}
+	]
+}
