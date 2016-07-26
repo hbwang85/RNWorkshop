@@ -23,12 +23,11 @@ class SearchResults extends Component {
     var ds = new ListView.DataSource(
       {rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
-      isLoading: true,
       dataSource: ds.cloneWithRows([]),
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     fetch('https://api.github.com/search/users?q=h&order=asc')
       .then((response) => response.json())
       .then((responseData) => {
@@ -112,12 +111,24 @@ class SearchResults extends Component {
   }
 
   render() {
-    return (
-     <View style={{flex: 1}}>
-       <ListView
+    var content = this.state.dataSource.getRowCount() === 0 ? <ActivityIndicatorIOS
+      style={{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+      animating={true}
+      size={'large'}
+      color={'black'}
+    /> :
+    <ListView
         enableEmptySections={true} //MUST
         dataSource={this.state.dataSource}
-        renderRow={this.renderRow.bind(this)}/>
+        renderRow={this.renderRow.bind(this)}/>    
+    
+    return (
+     <View style={{flex: 1}}>
+       {content}
      </View>
     )
   }

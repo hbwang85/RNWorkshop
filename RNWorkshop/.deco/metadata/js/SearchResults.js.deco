@@ -3,11 +3,11 @@
 		{
 			"range": {
 				"from": {
-					"line": 58,
+					"line": 57,
 					"ch": 23
 				},
 				"to": {
-					"line": 58,
+					"line": 57,
 					"ch": 25
 				}
 			},
@@ -20,11 +20,11 @@
 		{
 			"range": {
 				"from": {
-					"line": 59,
+					"line": 58,
 					"ch": 23
 				},
 				"to": {
-					"line": 59,
+					"line": 58,
 					"ch": 41
 				}
 			},
@@ -36,11 +36,11 @@
 		{
 			"range": {
 				"from": {
-					"line": 68,
+					"line": 67,
 					"ch": 33
 				},
 				"to": {
-					"line": 68,
+					"line": 67,
 					"ch": 40
 				}
 			},
@@ -52,11 +52,11 @@
 		{
 			"range": {
 				"from": {
-					"line": 72,
+					"line": 71,
 					"ch": 27
 				},
 				"to": {
-					"line": 72,
+					"line": 71,
 					"ch": 25
 				}
 			},
@@ -68,11 +68,11 @@
 		{
 			"range": {
 				"from": {
-					"line": 76,
+					"line": 75,
 					"ch": 34
 				},
 				"to": {
-					"line": 76,
+					"line": 75,
 					"ch": 35
 				}
 			},
@@ -85,11 +85,11 @@
 		{
 			"range": {
 				"from": {
-					"line": 87,
+					"line": 86,
 					"ch": 34
 				},
 				"to": {
-					"line": 87,
+					"line": 86,
 					"ch": 32
 				}
 			},
@@ -101,11 +101,11 @@
 		{
 			"range": {
 				"from": {
-					"line": 88,
+					"line": 87,
 					"ch": 32
 				},
 				"to": {
-					"line": 88,
+					"line": 87,
 					"ch": 30
 				}
 			},
@@ -116,11 +116,11 @@
 		{
 			"range": {
 				"from": {
-					"line": 89,
+					"line": 88,
 					"ch": 40
 				},
 				"to": {
-					"line": 89,
+					"line": 88,
 					"ch": 38
 				}
 			},
@@ -129,6 +129,87 @@
 			"type": "string",
 			"name": "FontWeight",
 			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 116,
+					"ch": 20
+				},
+				"to": {
+					"line": 116,
+					"ch": 28
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "AlignItems",
+			"type": "string",
+			"name": "AlignItems",
+			"group": "ACTIVITY INDICATOR IOS"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 117,
+					"ch": 24
+				},
+				"to": {
+					"line": 117,
+					"ch": 32
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "JustifyContent",
+			"type": "string",
+			"name": "JustifyContent",
+			"group": "ACTIVITY INDICATOR IOS"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 119,
+					"ch": 17
+				},
+				"to": {
+					"line": 119,
+					"ch": 21
+				}
+			},
+			"type": "boolean",
+			"name": "Animating",
+			"group": "ACTIVITY INDICATOR IOS"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 120,
+					"ch": 12
+				},
+				"to": {
+					"line": 120,
+					"ch": 19
+				}
+			},
+			"editWith": "inputField",
+			"type": "string",
+			"name": "Size",
+			"group": "ACTIVITY INDICATOR IOS"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 121,
+					"ch": 13
+				},
+				"to": {
+					"line": 121,
+					"ch": 20
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "Color",
+			"group": "ACTIVITY INDICATOR IOS"
 		}
 	]
 }
