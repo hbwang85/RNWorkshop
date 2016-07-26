@@ -13,11 +13,7 @@ import {
   NavigatorIOS,
 } from 'react-native';
 
-class Helloworld extends Component {
-  render() {
-    return(<Text style={styles.text}>Hello World</Text>)
-  }
-}
+var SearchResults = require('./js/SearchResults').default;
 
 class Project extends Component {
   render() {
@@ -26,7 +22,7 @@ class Project extends Component {
         style={styles.container}
         initialRoute={{
           title: 'List',
-          component: Helloworld,
+          component: SearchResults,
         }}/>
     );
   }
@@ -36,12 +32,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  text: {
-    color: 'black',
-    backgroundColor: 'red',
-    fontSize: 40,
-    margin: 80,
-  }
 });
 
 AppRegistry.registerComponent('Project', () => Project);
