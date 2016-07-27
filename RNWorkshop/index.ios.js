@@ -15,7 +15,7 @@ import {
 
 var SearchResults = require('./js/SearchResults').default;
 
-class Project extends Component {
+class rootComponent extends Component {
   render() {
     return (
       <NavigatorIOS
@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Project', () => Project);
+AppRegistry.registerComponent('Project', () => rootComponent);
