@@ -12,12 +12,12 @@ import {
 
 var DetailPage = require('./DetailPage').default;
 
-class SearchResults extends Component {
+class SearchResults extends Component {  //export default 
 
   static propTypes = {}
 
   static defaultProps = {}
-
+  
   constructor(props) {
     super(props)
     var ds = new ListView.DataSource(
@@ -66,7 +66,7 @@ class SearchResults extends Component {
   
   _selectCell(user: Object) {
     this.props.navigator.push({
-      title: 'Detail',
+      title: user.login,
       component: DetailPage,
       passProps: {user:user},
     });
@@ -115,7 +115,7 @@ class SearchResults extends Component {
            }}>
            <Image
              style={{
-               width: 80,    
+               width: 80,      
                height: 80,
                margin: 10,
              }}
@@ -130,9 +130,9 @@ class SearchResults extends Component {
              <Text
                style={{
                  flex: 1,
-                 color: 'black',    
-                 fontSize: 16,    
-                 fontWeight: 'normal',    
+                 color: 'black',      
+                 fontSize: 16,      
+                 fontWeight: 'normal',      
                  fontFamily: 'Helvetica Neue', 
                  marginTop: 40,
                }}>
@@ -161,7 +161,7 @@ class SearchResults extends Component {
         enableEmptySections={true} //MUST
         dataSource={this.state.dataSource}
         onEndReached={this._fetchData}  //.bind(this)
-        onEndReachedThreshold={30}
+        onEndReachedThreshold={50}
         renderFooter={this._renderFooter}
         renderRow={this.renderRow.bind(this)}/>
     )

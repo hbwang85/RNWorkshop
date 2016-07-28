@@ -1,15 +1,23 @@
-import React, { Component, } from 'react'
+'use strict';
+import React, { Component, PropTypes,} from 'react'
 import {
   View,
   Text,
   Image,
 } from 'react-native'
 
-class DetailPage extends Component {
+export default class DetailPage extends Component {
 
-  static propTypes = {}
+  static propTypes = {
+    user: PropTypes.object.isRequired,
+  }
 
-  static defaultProps = {}
+  static defaultProps = {
+    user: {
+      id: 'defaultID',
+      score: 5,
+    }
+  }
 
   constructor(props) {
     super(props)
@@ -52,5 +60,3 @@ class DetailPage extends Component {
     )
   }
 }
-
-export default DetailPage
