@@ -1,4 +1,4 @@
 # RNWorkshop
 React Native workshop  
 
-[[resources/logo.png]]
+![Alt text](https://github.com/hbwang85/RNWorkshop/wiki/resources/logo.png)
